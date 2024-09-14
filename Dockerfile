@@ -6,12 +6,6 @@ WORKDIR /app
 # Instalar o Prefect e a versão Docker
 RUN pip install -U prefect --pre
 
-# Copiar o script de inicialização para o contêiner
-COPY prefect.sh /app/prefect.crlf
-
-# Garantir que o script de inicialização seja executável
-RUN  /app/prefect.crlf
-
 # Expor a porta padrão do Prefect
 EXPOSE 4200
 
