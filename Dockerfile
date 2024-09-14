@@ -1,9 +1,19 @@
 FROM python:3.9.20-alpine3.20
 
-WORKDIR /app  
+# Definir o diretório de trabalho
+WORKDIR /app
 
-RUN pip install -U prefect --pre  prefect-docker
+# Instalar o Prefect e a versão Docker
+RUN pip install -U prefect --pre
 
-EXPOSE 4200 
+# Copiar o script de inicialização para o contêiner
+COPY prefect.sh /app/prefect.sh
 
-CMD ["/prefect.sh"]
+# Garantir que o script de inicialização seja executável
+RUN  /app/prefect.sh
+
+# Expor a porta padrão do Prefect
+EXPOSE 4200
+
+# Definir o comando para iniciar o Prefect Server
+CMD ["/app/prefect.sh"]
