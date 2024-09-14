@@ -1,0 +1,4 @@
+# No diretório do projeto
+echo '#!/bin/sh' > prefect.crlf
+echo 'prefect server start --host 0.0.0.0' >> prefect.crlf
+chmod +x prefect.crlf
