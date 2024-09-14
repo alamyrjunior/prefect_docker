@@ -16,4 +16,4 @@ RUN  /app/prefect.crlf
 EXPOSE 4200
 
 # Definir o comando para iniciar o Prefect Server
-CMD ["/app/prefect.crlf"]
+CMD ["prefect", "server", "start", "--host", "0.0.0.0"]
