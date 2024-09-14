@@ -10,4 +10,4 @@ RUN pip install -U prefect --pre
 EXPOSE 4200
 
 # Definir o comando para iniciar o Prefect Server
-CMD ["prefect", "server", "start", "--host", "0.0.0.0"]
+CMD ["prefect", "server", "start"]
