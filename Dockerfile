@@ -8,5 +8,3 @@ RUN pip install -U prefect --pre
 
 # Expor a porta padrão do Prefect
 EXPOSE 4200
-
-CMD ["sh", "-c", "prefect server start && prefect worker start --pool 'from-git'"]
