@@ -9,5 +9,4 @@ RUN pip install -U prefect --pre
 # Expor a porta padrão do Prefect
 EXPOSE 4200
 
-# Definir o comando para iniciar o Prefect Server
-CMD ["prefect", "server", "start", "--host", "0.0.0.0"]
+CMD ["sh", "-c", "prefect server start && prefect worker start --pool 'from-git'"]
