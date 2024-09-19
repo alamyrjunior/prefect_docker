@@ -1,10 +1,8 @@
-FROM python:3.9.20-alpine3.20
+# Usando uma imagem base do Python
+FROM python:3.10-slim
 
-# Definir o diretório de trabalho
+# Definindo o diretório de trabalho
 WORKDIR /app
 
-# Instalar o Prefect
-RUN pip install -U prefect --pre
-
-# Expor a porta padrão do Prefect
-EXPOSE 4200
+# Copiando o arquivo de requisitos
+COPY requirements.txt .
