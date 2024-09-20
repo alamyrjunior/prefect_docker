@@ -11,4 +11,4 @@ RUN pip install -U prefect --pre
 EXPOSE 4200
 
 # Definir o comando para iniciar o Prefect Server
-CMD ["prefect", "server", "start", "--host", "https://prefectdocker-production.up.railway.app/"]
+CMD ["prefect", "server", "start", "--host", "0.0.0.0"]
