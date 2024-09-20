@@ -7,6 +7,8 @@ WORKDIR /app
 # Instalar o Prefect e a versão Docker
 RUN pip install -U prefect --pre
 
+RUN prefect config set  PREFECT_API_URL = "https://prefectdocker-production.up.railway.app/api"
+
 # Expor a porta padrão do Prefect
 EXPOSE 4200
 
